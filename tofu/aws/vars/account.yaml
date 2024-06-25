@@ -1,0 +1,21 @@
+---
+region: us-west-2
+azs:
+  - us-west-2a
+  - us-west-2b
+  - us-west-2c
+cidr: 10.34.0.0/16
+public_subnets:
+  - 10.34.0.0/24
+  - 10.34.1.0/24
+  - 10.34.2.0/24
+private_subnets:
+  - 10.34.3.0/22
+  - 10.34.7.0/22
+  - 10.34.11.0/22
+my_public_cidr: #your_ip
+eks_enabled: true
+cluster_name: eks-testing-cluster
+cluster_version: "1.30"
+msk_enabled: true
+
