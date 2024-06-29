@@ -9,7 +9,7 @@ module "msk_cluster" {
 
   broker_node_client_subnets  = module.vpc.private_subnets
   broker_node_instance_type   = "kafka.t3.small"
-  broker_node_security_groups = [module.msk_sg.security_group_id]
+  broker_node_security_groups = [module.msk_sg[0].security_group_id]
 
   tags = local.vars.tags
 }

@@ -8,7 +8,7 @@ module "eks" {
   cluster_version = local.vars.eks_version
 
   cluster_endpoint_public_access  = true
-  cluster_additional_security_group_ids = [module.control_plane_sg.control_plane_sg[0]]
+  cluster_additional_security_group_ids = [module.control_plane_sg[0].security_group_id]
 
   cluster_addons = {
     coredns = {

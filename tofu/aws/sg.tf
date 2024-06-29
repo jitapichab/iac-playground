@@ -24,7 +24,7 @@ module "control_plane_sg" {
   description = "Security group for control plane eks cluster"
   vpc_id      = module.vpc.vpc_id
 
-  ingress_cidr_blocks = [module.vpc.vpc_cidr_block,local.vars.my_public_cidr]
+  ingress_cidr_blocks = [module.vpc.vpc_cidr_block,var.my_public_cidr]
   ingress_rules       = ["https-443-tcp"]
 
   tags = local.vars.tags

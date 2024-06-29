@@ -4,6 +4,6 @@ locals {
 }
 
 provider "aws" {
-  region  = local.vars.aws_region
+  region  = local.vars.region
   profile = local.account
 }
