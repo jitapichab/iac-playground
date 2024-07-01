@@ -1,0 +1,8 @@
+---
+aws_region: us-west-2
+name: iac-playground
+cidr: 10.34.0.0/16
+tags:
+  Project: iac-playground
+  Region: us-west-2
+  Tool: terragrunt

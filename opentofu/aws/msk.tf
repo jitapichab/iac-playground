@@ -6,6 +6,7 @@ module "msk_cluster" {
   name                   = "msk-${local.account}"
   kafka_version          = "3.5.1"
   number_of_broker_nodes = 3
+  encryption_in_transit_client_broker = "TLS_PLAINTEXT"
 
   broker_node_client_subnets  = module.vpc.private_subnets
   broker_node_instance_type   = "kafka.t3.small"

@@ -1,0 +1,10 @@
+#terraform {
+#  backend "s3" {
+#    bucket         = "your_bucket"
+#    dynamodb_table = "terraform-lock-table"
+#    encrypt        = true
+#    key            = "your_key/terraform.tfstate"
+#    profile        = "your_profile"
+#    region         = "your_region"
+#  }
+#}

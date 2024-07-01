@@ -5,7 +5,7 @@ module "msk_sg" {
   count = local.vars.msk_enabled ? 1 : 0
 
   name        = "msk-${local.account}"
-  description = "Security group for control plane eks cluster"
+  description = "Security group for msk cluster"
   vpc_id      = module.vpc.vpc_id
 
   ingress_cidr_blocks = [module.vpc.vpc_cidr_block]
